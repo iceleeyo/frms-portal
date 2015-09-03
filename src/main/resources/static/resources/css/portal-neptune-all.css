@@ -1,0 +1,285 @@
+@import '../../extjs/resources/ext-theme-neptune/ext-theme-neptune-all.css';
+
+@import '../../extjs/resources/ext-theme-classic/ext-theme-datetime.css';
+
+@import 'portal.css';
+
+@import 'portal-images.css';
+
+.blue-btn {
+	padding: 3px 3px 3px 3px;
+	border: 1px solid #2784d5 !important;
+	border-radius: 0 !important;
+	background: #2e94ed none !important;
+}
+
+.blue-btn:hover {
+	background: #309fff none !important;
+}
+
+.blue-btn * {
+	color: #ffffff !important;
+}
+
+.white-btn {
+	padding: 3px 3px 3px 3px;
+	border: 1px solid #d3d3d3 !important;
+	border-radius: 0 !important;
+	background: #e4e4e4 none !important;
+}
+
+.white-btn:hover {
+	background: #ededed none !important;
+}
+
+.white-btn * {
+	color: #666 !important;
+}
+
+.btn-width-4 {
+	width: 70px;
+}
+
+/*总的搜索框*/
+.common-search {
+	/*margin: 10px 0 0 0 !important;*/
+	/*padding: 0 6px !important;*/
+	border: 0 !important;
+	background-color: #ffffff !important;
+}
+
+.common-search .x-panel-default-framed {
+	border: 1px solid #2F94EE !important;
+}
+
+.common-search .x-panel-header-default {
+	background: #ffffff none;
+	border-bottom: 1px solid #2F94EE !important;
+}
+
+.common-search .x-header-text {
+	color: #157FCC !important;
+	font-size: 16px;
+}
+
+.common-search .x-panel-body-default {
+	background-color: #ffffff;
+	border-width: 0;
+}
+
+.common-search .x-table-layout {
+	width: 100%;
+}
+
+/*查询框*/
+.common-search-panel-base .x-panel-body-default {
+	padding: 9px 0 0 0;
+}
+
+.common-search-panel-base td.x-table-layout-cell {
+	width: 25%;
+	padding: 0 0 7px 0;
+}
+
+/*高级查询框*/
+.common-search-panel-extend .x-panel-body-default {
+	padding: 0;
+}
+
+.common-search-panel-extend td.x-table-layout-cell {
+	width: 25%;
+	padding: 0 0 7px 0;
+}
+
+/* 窗口部分 */
+.x-window-default {
+	border: 0 !important;
+}
+
+.common-window div {
+	border: 0 !important;
+}
+
+.common-window .x-window-body-default {
+	padding: 6px 4px 6px 4px;
+}
+
+.common-window .x-table-layout {
+	width: 100% !important;
+}
+
+/* 展示面板部分 */
+.common-border-0 div {
+	border: 0 !important;
+}
+
+.common-border-0 .x-toolbar-default {
+	border: solid #DCDCDC !important;
+	border-width: 0 0 1px 0 !important;
+}
+
+.common-display {
+	background-color: #EAEAEA;
+}
+
+.common-display .x-panel {
+	margin: 8px 8px 0 8px;
+}
+
+.common-display .x-panel-header-default {
+	background-color: #ffffff;
+	border: 1px solid #DCDCDC !important;
+}
+
+.common-display .x-panel-header-default .x-header-text {
+	color: #2784d5;
+}
+
+.common-display .x-panel-body-default {
+	border: solid #DCDCDC !important;
+	border-width: 0 1px 1px 1px !important;
+}
+
+.common-display .x-form-item-label {
+	color: #939393;
+	margin-right: 10px !important;
+}
+
+.common-display .x-grid-view-default {
+	overflow-x: hidden !important;
+}
+
+/* tab部分 */
+.common-tab-panel .x-tab-bar-body-default {
+	background-color: #EAEAEA;
+}
+
+.common-tab-panel .x-tab-default-bottom {
+	background-color: #EAEAEA;
+}
+
+.common-tab-panel .x-tab-default .x-tab-inner {
+	color: #289CCD;
+}
+
+.common-tab-panel .x-tab-default-active {
+	background-color: #289CCD;
+}
+
+.common-tab-panel .x-tab-default-active .x-tab-inner {
+	color: #FFFFFF;
+}
+
+/* portal的tab部分 */
+.portal-tab-panel .x-panel-body {
+	overflow: hidden !important;
+}
+
+.portal-tab-panel .x-panel-body-default {
+	border: 0px;
+}
+
+.portal-tab-panel .x-tab-bar-default {
+	background-color: #bcbcbc;
+}
+
+.portal-tab-panel .x-tab-bar-body-default {
+	background-color: #bcbcbc;
+	z-index: 1;
+}
+
+.portal-tab-panel .x-tab-bar-strip-default {
+	background-color: #eaeaea !important;
+}
+
+.portal-tab-panel .x-tab-default-top {
+	background-color: #cdcdcd;
+}
+
+.portal-tab-panel .x-tab-default .x-tab-inner {
+	color: #363636;
+}
+
+.portal-tab-panel .x-tab-default-active {
+	background-color: #eaeaea;
+}
+
+.portal-tab-panel .x-tab-default-active .x-tab-inner {
+	color: #289CCD;
+}
+
+.common-paging-toolbar {
+	padding: 2px 0px 2px 2px !important;
+	border: 2px solid #eeeeee !important;
+	border-bottom: none !important;
+}
+
+.common-navigator .x-panel-header-default {
+	background-color: #c8c8c8
+}
+
+.common-navigator .x-panel-header-default .x-tool-img {
+	background-color: transparent;
+}
+
+.common-navigator .x-panel-body-default {
+	border: none;
+	background-color: #ededed;
+}
+
+.common-navigator .x-accordion-layout-ct {
+	padding: 0px;
+}
+
+.common-navigator+div div {
+	background-color: #bababa;
+}
+
+.common-container {
+	background-color: #d6d6d6 !important;
+}
+
+.common-container .x-panel-header-default-vertical {
+	background-color: #bababa !important;
+	border: none;
+}
+
+.common-container .x-panel-header-default .x-tool-img {
+	background-color: transparent;
+}
+
+.common-itemrenderer .x-panel-header-default-collapsed {
+	background-color: #d6d6d6 !important;
+}
+
+.common-itemrenderer .x-accordion-hd {
+	background-color: #c8c8c8;
+}
+
+.common-itemrenderer .x-accordion-hd-over {
+	background-color: #c8c8c8 !important;
+}
+
+.common-itemrenderer .x-grid-cell-inner-treecolumn {
+	/* background-color : #ededed; */
+	cursor: pointer;
+}
+
+.common-itemrenderer .x-grid-row .x-grid-td {
+	background-color: #ededed;
+}
+
+.common-itemrenderer .x-grid-row-over .x-grid-td {
+	background-color: #c7e4f1;
+}
+
+.common-itemrenderer .x-grid-row-selected .x-grid-td {
+	background-color: #3ca3ce;
+}
+
+.x-tree-node-text {
+	font-size: 13px;
+	line-height: 15px;
+	padding-left: 4px;
+	cursor: pointer;
+}

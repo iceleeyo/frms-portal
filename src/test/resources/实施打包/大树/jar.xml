@@ -1,0 +1,15 @@
+<dependency>
+			<artifactId>frms-report-mgr</artifactId>
+			<groupId>cn.com.bsfit</groupId>
+			<version>1.2.0-dashu-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>cn.com.bsfit</groupId>
+			<artifactId>frms-namelist</artifactId>
+			<version>1.0.0-bigtree-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>cn.com.bsfit</groupId>
+			<artifactId>frms-credit</artifactId>
+			<version>1.0.0-dashu-SNAPSHOT</version>
+		</dependency>

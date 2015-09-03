@@ -1,0 +1,20 @@
+<dependency>
+            <groupId>cn.com.bsfit</groupId>
+            <artifactId>frms-rams-mgr</artifactId>
+            <version>3.0.0-MOGUJIE</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.com.bsfit</groupId>
+            <artifactId>frms-namelist</artifactId>
+            <version>1.0.0-mgj-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <artifactId>frms-report-mgr</artifactId>
+            <groupId>cn.com.bsfit</groupId>
+            <version>1.2.0-mogujie-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.com.bsfit</groupId>
+            <artifactId>frms-query</artifactId>
+            <version>1.2.0-mogujie-SNAPSHOT</version>
+        </dependency>

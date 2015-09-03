@@ -1,0 +1,122 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: "Microsoft YaHei", "宋体", Arial, Helvetica, sans-serif, serif !important
+	font-size: 12px;
+	width: 100%;
+	height: 100%;
+	background: url(../images/login/normal/bg.png) no-repeat #1353a3 center fixed;
+}
+
+#login_box {
+	width: 380px;
+	height: 450px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -190px;
+	margin-top: -225px;
+	background: url(../images/login/normal/loginBg.png);
+}
+
+#login_title {
+	height: 32px;
+	width: 350px;
+	margin: 138px auto 0px;
+	background: #1d71c6;
+	font-size: 16px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 32px;
+}
+
+#login_context {
+	width: 350px;
+	margin: 0px auto;
+	padding-top: 40px;
+}
+
+#login_context .box {
+	height: 30px;
+	width: 268px;
+	margin-left: 41px;
+	margin-bottom: 26px;
+	border: 1px solid #bfbfbf;
+	background: #ffffff;
+	/* Gecko browsers */
+	-moz-border-radius: 6px;
+	/* Webkit browsers */
+	-webkit-border-radius: 6px;
+	/* W3C syntax - likely to be standard so use for future proofing */
+	border-radius: 6px;
+}
+
+#login_context .box .user {
+	width: 36px;
+	height: 30px;
+	float: left;
+	border: 0px;
+	-moz-border-radius: 6px 0px 0px 6px;
+	-webkit-border-radius: 6px 0px 0px 6px;
+	border-radius: 6px 0px 0px 6px;
+	background: url(../images/login/normal/user.png) no-repeat #f5f5f5 center;
+}
+
+#login_context .box .password {
+	width: 36px;
+	height: 30px;
+	float: left;
+	border: 0px;
+	-moz-border-radius: 6px 0px 0px 6px;
+	-webkit-border-radius: 6px 0px 0px 6px;
+	border-radius: 6px 0px 0px 6px;
+	background: url(../images/login/normal/password.png) no-repeat #f5f5f5 center;
+}
+
+#login_context .box input {
+	float: left;
+	height: 30px;
+	line-height : 30px;
+	width: 232px;
+	border: 0px;
+	-moz-border-radius: 0px 6px 6px 0px;
+	-webkit-border-radius: 0px 6px 6px 0px;
+	border-radius: 0px 6px 6px 0px;
+	background: #ffffff;
+}
+
+#login_context .button {
+	border: 0px;
+}
+
+#login_context .box input.bt {
+	width: 270px;
+	height: 32px;
+	border: 0px;
+	cursor: pointer;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	background: url(../images/login/normal/btBg.png) no-repeat;
+	color: #ffffff;
+	font-family: "Microsoft YaHei", "宋体", Arial, Helvetica, sans-serif, serif !important;
+	font-size: 14px;
+}
+
+#login_context .box input.bt:hover {
+	background: #146ecc;
+}
+
+#footer {
+	background: #114b92;
+	height: 40px;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	text-align: center;
+	line-height: 40px;
+	color: #c5c5c5;
+}

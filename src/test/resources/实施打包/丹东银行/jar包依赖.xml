@@ -1,0 +1,20 @@
+<dependency>
+	<groupId>cn.com.bsfit</groupId>
+	<artifactId>frms-rams-mgr</artifactId>
+	<version>1.0.0-dandong-SNAPSHOT</version>
+</dependency>
+<dependency>
+	<groupId>cn.com.bsfit</groupId>
+	<artifactId>frms-namelist</artifactId>
+	<version>1.0.0-dandong-SNAPSHOT</version>
+</dependency>
+<dependency>
+	<groupId>cn.com.bsfit</groupId>
+	<artifactId>frms-dashboard</artifactId>
+	<version>1.0.0-dandong-SNAPSHOT</version>
+</dependency>
+<dependency>
+	<groupId>cn.com.bsfit</groupId>
+	<artifactId>frms-report-mgr</artifactId>
+	<version>1.2.0-dandong-SNAPSHOT</version>
+</dependency>

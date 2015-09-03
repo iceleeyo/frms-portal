@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>风控后台管理系统</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css">
+	<link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon" />
+	<script type="text/javascript" src="extjs/ext-all.js"></script>
+	<script type="text/javascript" src="extjs/locale/ext-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="extjs/ext.util.md5.js"></script>
+	<script type="text/javascript" src="login.js"></script>
+</head>
+<body onload="getLoginCss()">
+	<div id="login_box">
+		<div id="login_main">
+			<div id="login_title">
+				<p>用户登录</p>
+			</div>
+			<div id="login_context">
+				<form id="loginForm" method="post">
+					<div class="box">
+						<div class="user"></div>
+						<input type="text" id="loginName">
+					</div>
+					<div class="box">
+						<div class="password"></div>
+						<input type="password" id="password">
+					</div>
+					<div id="loginEmpty" style="display: none;color:red;width: 268px;margin-left: 43px;margin-bottom: 26px;">您输入的用户名或密码为空，请重新输入！</div>
+					<div id="loginError" style="display: none;color:red;width: 268px;margin-left: 43px;margin-bottom: 26px;">您输入的用户名或密码不正确，请重新输入！</div>
+					<div class="box button">
+						<input class="bt" type="button" id="loginBtn" onClick="doLogin()" value="登&nbsp;录">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>Copyright © 2010-2015 www.bsfit.com.cn All Rights Reserved 版权所有  杭州邦盛金融信息技术有限公司</p>
+	</div>
+</body>
+</html>

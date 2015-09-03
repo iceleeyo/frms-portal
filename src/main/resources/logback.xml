@@ -1,0 +1,92 @@
+<configuration>
+	<property file="application.properties" />
+	<!-- 输出到控制台 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<!-- 输出格式 -->
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- error级别单独记录 -->
+	<appender name="errorAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>log/error-today.log</file>
+		<!-- 以day为单位自动回滚 -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>log/error/error-%d{yyyy-MM-dd}.log.gz
+			</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+		<!-- error级别过滤器 -->
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>ERROR</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<appender name="infoAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>log/info-today.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>log/info/info-%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.LevelFilter">
+			<level>INFO</level>
+			<onMatch>ACCEPT</onMatch>
+			<onMismatch>DENY</onMismatch>
+		</filter>
+	</appender>
+
+	<!-- 过滤"toDB-"为首的消息 -->
+	<appender name="SAVE2DB" class="cn.com.bsfit.frms.portal.base.log.LogDBAppender">
+		<connectionSource class="ch.qos.logback.core.db.DataSourceConnectionSource">
+			<!-- c3p0 pool config begin -->
+			<!--  
+			<dataSource class="com.mchange.v2.c3p0.ComboPooledDataSource"> 
+				<driverClass>${portal.jdbc.driverClassName}</driverClass> 
+				<jdbcUrl>${portal.jdbc.jdbcUrl}</jdbcUrl> 
+				<user>${portal.jdbc.username}</user>
+				<password>${portal.jdbc.password}</password>
+			</dataSource>
+			-->
+			<!-- c3p0 pool config end -->
+			<!-- HikariCP pool config begin -->
+			<dataSource class="com.zaxxer.hikari.HikariDataSource">
+				<driverClassName>${portal.jdbc.driverClassName}</driverClassName>
+				<jdbcUrl>${portal.jdbc.jdbcUrl}</jdbcUrl>
+				<username>${portal.jdbc.username}</username>
+				<password>${portal.jdbc.password}</password>
+				<!-- 池中最大链接数量 -->
+				<maxPoolSize>${portal.jdbc.maximumPoolSize}</maxPoolSize>
+				<!-- 池中最小空闲链接数量 -->
+				<minIdle>${portal.jdbc.minimumIdle}</minIdle>
+				<!-- 连接池中一个连接的最大生命周期 default：30分钟 -->
+				<maxLifetime>${portal.jdbc.maxLifetime}</maxLifetime>
+				<!-- 最大连接超时时间 default：30秒 -->
+				<connectionTimeout>${portal.jdbc.connectionTimeout}</connectionTimeout>
+				<!-- 最大空闲超时时间 default：10分钟   -->
+				<idleTimeout>${portal.jdbc.idleTimeout}</idleTimeout>
+				<connectionTestQuery>${portal.jdbc.connectionTestQuery}</connectionTestQuery>
+			</dataSource>
+			<!-- HikariCP pool config end -->
+		</connectionSource>
+		<!-- 过滤包含"toDB-"的消息 -->
+		<filter class="cn.com.bsfit.frms.portal.base.log.LogDBFilter" />
+	</appender>
+
+	<logger name="cn.com.bsfit.frms.portal.base.mapper" level="INFO" />
+	<logger name="cn.com.bsfit.frms.ds.mapper" level="INFO" />
+
+	<!-- 根，所有logger的祖先 -->
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="errorAppender" />
+		<appender-ref ref="infoAppender" />
+		<appender-ref ref="SAVE2DB" />
+	</root>
+</configuration>
